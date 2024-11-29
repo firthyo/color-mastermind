@@ -8,10 +8,12 @@ export interface DifficultyButtonProps {
   selected?: boolean;
 }
 
+export type FeedbackStageProps = string;
+
 // For Peg component props
 export interface PegProps {
   color?: string; // Color of the peg
-  feedback?: "green" | "yellow" | "gray";
+  feedback?: FeedbackStageProps;
   clickable?: boolean;
   disabled?: boolean;
 }

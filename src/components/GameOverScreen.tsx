@@ -1,28 +1,27 @@
 import React from "react";
-import {
-  CorrectCode,
-  GameOverActions,
-  Message,
-  Peg,
-  PlayAgainButton,
-  Row,
-} from "./styles";
+import { GameOverActions, Message, Row, Peg, PlayAgainButton } from "./styles";
 
-export const GameOverScreen = ({ win, secretCode, onPlayAgain }) => (
+interface Props {
+  win: boolean;
+  secretCode: string[];
+  onPlayAgain: () => void;
+}
+
+const GameOverScreen: React.FC<Props> = ({ win, secretCode, onPlayAgain }) => (
   <GameOverActions>
-    <Message win={win}>
-      {win ? "Congratulations! You won!" : "Game Over!"}
-    </Message>
+    <Message win={win}>{win ? "You Win!" : "Game Over!"}</Message>
     {!win && (
-      <CorrectCode>
+      <div>
         <p>The correct code was:</p>
         <Row>
           {secretCode.map((color, i) => (
             <Peg key={i} color={color} />
           ))}
         </Row>
-      </CorrectCode>
+      </div>
     )}
     <PlayAgainButton onClick={onPlayAgain}>Play Again</PlayAgainButton>
   </GameOverActions>
 );
+
+export default GameOverScreen;

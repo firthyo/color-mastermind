@@ -193,7 +193,7 @@ export const Peg = styled.div<PegProps>`
       case "green":
         return "3px solid #27ae60";
       case "yellow":
-        return "3px solid #d4ac0d";
+        return "3px solid #ffd449";
       case "gray":
         return "3px solid #495057";
       default:

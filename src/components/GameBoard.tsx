@@ -1,13 +1,19 @@
 import React from "react";
+import { Board, Row, Peg } from "./styles";
+import { FeedbackStageProps } from "../types/type";
 import { CODE_LENGTH } from "../utils/constants";
-import { Board, Peg, Row } from "./styles";
 
-export const GameBoard = ({ attempts, currentGuess, secretCode, feedbackColors }) => (
+interface Props {
+  attempts: { colors: string[]; feedback: FeedbackStageProps[] }[];
+  currentGuess: string[];
+}
+
+const GameBoard: React.FC<Props> = ({ attempts, currentGuess }) => (
   <Board>
-    {attempts.map((attempt, i) => (
-      <Row key={i}>
-        {attempt.colors.map((color, j) => (
-          <Peg key={j} color={color} feedback={feedbackColors[j]} />
+    {attempts.map((attempt, index) => (
+      <Row key={index}>
+        {attempt.colors.map((color, i) => (
+          <Peg key={i} color={color} feedback={attempt.feedback[i]} />
         ))}
       </Row>
     ))}
@@ -18,3 +24,5 @@ export const GameBoard = ({ attempts, currentGuess, secretCode, feedbackColors }
     </Row>
   </Board>
 );
+
+export default GameBoard;
