@@ -101,6 +101,7 @@ export const Title = styled.h1`
     left: 50%;
     transform: translateX(-50%);
     width: 60px;
+    cursor: pointer;
     height: 4px;
     background: linear-gradient(90deg, #ffb5b5, #95d5b2);
     border-radius: 2px;
@@ -170,13 +171,15 @@ export const Row = styled.div`
 
 export const pegShimmer = css`
   background-size: 1000px 100%;
-  animation: ${shimmer} 2s linear infinite;
+  /* animation: ${shimmer} 2s linear infinite; */
 `;
 
 export const Peg = styled.div<PegProps>`
   width: 60px;
   height: 60px;
   border-radius: 18px;
+
+  
   background: ${(props) => {
     if (props.color) {
       return `linear-gradient(135deg, ${props.color} 0%, ${adjustColor(
