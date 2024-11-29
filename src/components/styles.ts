@@ -313,8 +313,8 @@ export const ButtonGroup = styled.div`
 `;
 
 export const IconButton = styled.button`
-  width: 48px;
-  height: 48px;
+  /* width: 48px; */
+  /* height: 48px; */
   border-radius: 14px;
   border: none;
   background: ${(props) =>

@@ -7,6 +7,7 @@ import {
   Peg,
 } from "./styles";
 import { DIFFICULTY } from "../utils/constants";
+import { Undo } from "lucide-react";
 
 interface Props {
   colors: string[];
@@ -42,7 +43,9 @@ export const GameActions: React.FC<Props> = ({
         ))}
       </ColorPicker>
       <ActionButtons>
-        <IconButton onClick={undoLastColor}>Undo</IconButton>
+        <IconButton onClick={undoLastColor}>
+          <Undo  size={42}/>
+        </IconButton>
         <SubmitButton onClick={checkGuess}>Submit</SubmitButton>
       </ActionButtons>
     </>
