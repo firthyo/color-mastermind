@@ -1,4 +1,3 @@
-// Theme colors for UI elements
 export const THEME = {
   primary: {
     light: "#4A90E2",
@@ -30,11 +29,10 @@ export const DIFFICULTY = {
 };
 
 export const COLORS = [
-    '#4A90E2',
-    '#50C878',
-    '#FF6B6B',
-    '#8B4513',
-    '#9B59B6',
-    '#FFB347'
-  ];
-  
+  "#4A90E2",
+  "#50C878",
+  "#FF6B6B",
+  "#8B4513",
+  "#9B59B6",
+  "#FFB347",
+];

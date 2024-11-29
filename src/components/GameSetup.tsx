@@ -5,8 +5,8 @@ import {
   Title,
   DifficultySelector,
   DifficultyButton,
-} from "../styles";
-import { DIFFICULTY } from "../../utils/constants";
+} from "./styles";
+import { DIFFICULTY } from "../utils/constants";
 
 export const GameSetup = ({ difficulty, onDifficultySelect }) => (
   <GameContainer>

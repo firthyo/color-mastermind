@@ -7,7 +7,7 @@ import GameBoard from "./GameBoard";
 // import GameActions from './GameActions';
 import GameOverScreen from "./GameOverScreen";
 import GameActions from "./ColorPicker";
-import { GameSetup } from "./game-setup/GameSetup";
+import { GameSetup } from "./GameSetup";
 
 const COLORS = [
   "#4A90E2",
