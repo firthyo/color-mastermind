@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "gh-pages -d dist --repo https://github.com/firthyo/color-mastermind.git",
+    "deploy": "gh-pages -d build --repo https://github.com/firthyo/color-mastermind.git",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
